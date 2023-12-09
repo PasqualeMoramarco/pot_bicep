@@ -1,0 +1,137 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environment": {
+      "value": "prod"
+    },
+    "appServicePlanName": {
+      "value": "brg-poc-plan-prod-we-001"
+    },
+    "functionAppSettings": {
+      "value": [
+        {
+          "name": "AzureWebJobsStorage",
+          "value": "DefaultEndpointsProtocol=https;AccountName=brgpocstprodwe;AccountKey=A5OIZURJyhKayx/EkC+LyUF54H64ResEYfb3w02Cw7F1omgMq/en3f1oRwz5UtwBgkeTI1FpapRR+ASt9/y83A==;EndpointSuffix=core.windows.net",
+          "slotSetting": false
+        },
+        {
+          "name": "FUNCTIONS_EXTENSION_VERSION",
+          "value": "~4",
+          "slotSetting": false
+        },
+        {
+          "name": "FUNCTIONS_WORKER_RUNTIME",
+          "value": "java",
+          "slotSetting": false
+        },
+        {
+          "name": "MAIN_CLASS",
+          "value": "com.prada.ApiPocApplication",
+          "slotSetting": false
+        },
+        {
+          "name": "SQL_URL",
+          "value": "jdbc:sqlserver://brg-poc-sql-prod-we.database.windows.net:1433;database=sqldb-poc-prod;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;",
+          "slotSetting": false
+        },
+        {
+          "name": "SQL_USER",
+          "value": "@Microsoft.KeyVault(VaultName=brg-poc-kv-prod-we;SecretName=SqlPocStream--Auth--Username)",
+          "slotSetting": false
+        },
+        {
+          "name": "SQL_PASSWORD",
+          "value": "@Microsoft.KeyVault(VaultName=brg-poc-kv-prod-we;SecretName=SqlPocStream--Auth--Password)",
+          "slotSetting": false
+        },
+        {
+          "name": "LOG_JPA_SQL",
+          "value": "false",
+          "slotSetting": false
+        },
+        {
+          "name": "LOG_LEVEL_SQL",
+          "value": "ERROR",
+          "slotSetting": false
+        },
+        {
+          "name": "LOG_LEVEL_API_CALL",
+          "value": "ERROR",
+          "slotSetting": false
+        },
+        {
+          "name": "LOG_LEVEL_ROOT",
+          "value": "ERROR",
+          "slotSetting": false
+        },
+        {
+          "name": "LIQUIBASE_ENABLED",
+          "value": "false",
+          "slotSetting": false
+        },
+        {
+          "name": "SWAGGER_FILE_ENV",
+          "value": "prod",
+          "slotSetting": false
+        },
+        {
+          "name": "AZURE_SERVICE_BUS_CONNECTION",
+          "value": "Endpoint=sb://brg-poc-sb-prod-we.servicebus.windows.net/;SharedAccessKeyName=DefaultSharedAccessKey;SharedAccessKey=vrIBX25No92eyqikeiIr2eaI1FDRCLy6j+ASbAXNIs8=",
+          "slotSetting": false
+        },
+        {
+          "name": "STORAGE_ACCOUNT_CONN",
+          "value": "DefaultEndpointsProtocol=https;AccountName=brgpocstprodwe;AccountKey=A5OIZURJyhKayx/EkC+LyUF54H64ResEYfb3w02Cw7F1omgMq/en3f1oRwz5UtwBgkeTI1FpapRR+ASt9/y83A==;EndpointSuffix=core.windows.net",
+          "slotSetting": false
+        },
+        {
+          "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+          "value": "d2ae287d-ab14-4b5e-973b-60baead60a65",
+          "slotSetting": false
+        },
+        {
+          "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+          "value": "InstrumentationKey=d2ae287d-ab14-4b5e-973b-60baead60a65;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/",
+          "slotSetting": false
+        },
+        {
+          "name": "AzureFunctionsJobHost__logging__logLevel__Function",
+          "value": "Error",
+          "slotSetting": false
+        },
+        {
+          "name": "AzureFunctionsJobHost__logging__logLevel__Function.kubixResult",
+          "value": "Error",
+          "slotSetting": false
+        },
+        {
+          "name": "AzureFunctionsJobHost__logging__logLevel__Host.Aggregator",
+          "value": "Error",
+          "slotSetting": false
+        },
+        {
+          "name": "AzureFunctionsJobHost__logging__logLevel__Host.Results",
+          "value": "Error",
+          "slotSetting": false
+        },
+        {
+          "name": "AzureFunctionsWebHost__hostid",
+          "value": "materials",
+          "slotSetting": false
+        },
+        {
+          "name": "WEBSITE_RUN_FROM_PACKAGE",
+          "value": "1",
+          "slotSetting": false
+        }
+      ]
+    },
+    "appInsightsName": {
+      "value": "brg-poc-appi-prod-we"
+    },
+    "javaVersion": {
+      "value": "11"
+    }
+  }
+}
