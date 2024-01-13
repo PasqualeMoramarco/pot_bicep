@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environment": {
+      "value": "dev"
+    },
+    "sqlServerName": {
+      "value": "brg-pot-sql-dev-we"
+    },
+    "maxSizeBytes": {
+      "value": 2147483648
+    },
+    "sqldbtier": {
+      "value": "Basic"
+    },
+    "sqldbtiername": {
+      "value": "Basic"
+    },
+    "sqldbcapacity": {
+      "value": 5
+    }
+  }
+}

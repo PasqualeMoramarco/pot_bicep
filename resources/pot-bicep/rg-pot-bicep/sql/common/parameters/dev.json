@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environment": {
+      "value": "dev"
+    },
+    "privateEndpointSubnetId": {
+      "value": "/subscriptions/dc0e83c0-ff63-4b26-8d30-2ec642ce1380/resourceGroups/PradaWE_RG/providers/Microsoft.Network/virtualNetworks/PradaWE_VNet/subnets/brg-pot-snet-pep-dev-we-001"
+    }
+  }
+}
