@@ -21,10 +21,6 @@ Clone the repository:
 ```
 git clone https://github.com/PasqualeMoramarco/poc_bicep.git
 ```
-Navigate to the project directory:
-```
-cd bicep-proof-of-concept
-```
 
 ## Usage
 
